@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_monthly_sales
+    description: Table contains for every track, aggregated by calendar month the id of the track,the name of the track, the number of times it has been bought, and the total costs associated with the purchases.
+    columns:
+      - name: TrackId
+        tests:
+          - not_null:
+              severity: warn
+          - unique:
+              severity: warn
+

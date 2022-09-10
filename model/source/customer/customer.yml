@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: noths
+    schema: customer
+    tables:
+      - name: customer
+        description: The customer table stores customers data
+        columns:
+        - name: CustomerId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+

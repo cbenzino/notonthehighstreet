@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: noths
+    schema: invoices
+    tables:
+      - name: invoices
+        description: The invoices table stores invoice header data
+        columns:
+        - name: InvoiceId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+
+      - name: invoice_items
+        description: The invoice_items table stores the invoice line-items data
+        columns:
+        - name: InvoiceId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null

@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: noths
+    schema: playlist
+    tables:
+      - name: playlists
+        description: The playlists table store data about playlists. Each playlist contains a list of tracks. Each track may belong to multiple playlists.
+        columns:
+        - name: PlaylistId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+
+      - name: playlist_track
+        description: The relationship between the playlists table and playlists_track table is many-to-many. The playlist_track table is used to reflect this relationship.
+        columns:
+        - name: PlaylistId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null

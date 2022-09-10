@@ -1,0 +1,50 @@
+version: 2
+
+sources:
+  - name: noths
+    schema: catalog
+    tables:
+      - name: albums
+        description: The table stores data about a list of tracks. Each album belongs to one artist. However, one artist may have multiple albums
+        columns:
+        - name: AlbumId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+
+      - name: artists
+        description: The table stores data about a list of tracks. Each album belongs to one artist. However, one artist may have multiple albums
+        columns:
+        - name: ArtistId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+
+      - name: media_types
+        description: The table stores media types such as MPEG audio and AAC audio file
+        columns:
+        - name: MediaTypeId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+
+      - name: genres
+        description: The table stores music types such as rock, jazz, metal, etc
+        columns:
+        - name: GenreId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
+
+      - name: tracks
+        description: The table store the data of songs. Each track belongs to one album
+        columns:
+        - name: TrackId
+          description: Primary key of the table
+          tests:
+          - unique
+          - not_null
