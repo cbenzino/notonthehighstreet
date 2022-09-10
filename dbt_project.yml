@@ -71,4 +71,4 @@ models:
               mrt_monthly_sales:
                 +tags: 
                   - "daily_schedule"
-                +materialized: view
+                +materialized: table
