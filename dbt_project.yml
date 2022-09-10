@@ -31,12 +31,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-    noths_dbt:
-        # Applies to all files under models/example/
-        example:
-            +dataset: dbt_example
-            +materialized: view
-            +tags: "daily_schedule"
 
         source:
             +schema: sources
