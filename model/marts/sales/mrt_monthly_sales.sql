@@ -4,12 +4,12 @@
     cluster_by = 'TrackId',
     partition_by ={ 'field': 'InvoiceDate',
     'data_type': 'date',
-    'granularity': 'month' },
+    'granularity': 'month' }
 ) }}
 
 select
 *
-from {{ ref('cte_monthly_sales') }}
+from {{ ref('stg_monthly_sales') }}
 
   -- this filter will only be applied on an incremental run
   where InvoiceDate > (select max(InvoiceDate) from {{ this }})
