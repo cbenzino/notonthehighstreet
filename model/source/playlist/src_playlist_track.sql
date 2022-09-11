@@ -5,5 +5,4 @@
 
     select
         * 
-    from
-        {{ source('playlist','playlist_track') }}
+    from {{ source('playlist','playlist_track') }}
