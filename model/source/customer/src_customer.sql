@@ -5,5 +5,4 @@
 
     select
         * 
-    from
-        {{ source('customer','customer') }}
+    from {{ source('customer','customer') }}
