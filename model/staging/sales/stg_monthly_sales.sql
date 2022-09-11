@@ -3,7 +3,7 @@
     cluster_by = 'TrackId',
     partition_by ={ 'field': 'InvoiceDate',
     'data_type': 'date',
-    'granularity': 'month' },
+    'granularity': 'month' }
 ) }}
 
 with cte_tracks as (
