@@ -10,8 +10,7 @@
     select
         *
         ,  DATE_TRUNC('day', InvoiceDate::date) as invoice_date
-    from
-        {{ source('invoice','invoice') }}
+    from {{ source('invoice','invoice') }}
 
         {% if is_incremental() %}
 
